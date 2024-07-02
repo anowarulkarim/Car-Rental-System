@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'registration.css'%}">
+    <script src="{% static 'report.js'%}" type="text/javascript"> </script>
+</head>
+<body background="{% static 'img/reg2.jpg'%}">
+ <div class="wrapper">
+     <div class="title">Give Review</div>
+     <form action="" method="POST">
+         {% csrf_token %}
+     <div class="form">
+         <div class="input_field">
+             <label>Advice</label>
+             <input autocomplete="off" type="text" class="input" name="advice" required>
+         </div>
+         <div class="input_field">
+             <label>rating</label>
+             <input autocomplete="off" type="range" min="0" max="10" class="input" name="rating" required>
+         </div>
+        <div class="input_field">
+             <input type="submit"  value="Submit" class="btn" onclick="return review()">
+         </div>
+         {% if massages %}
+         {% for massage in massages %}
+         <h2>Registration Completed</h2>
+         <a href="{% url 'login page' %}">login now</a>
+         {% endfor %}
+
+         {% endif%}
+         </div>
+ </form>
+ </div>
+
+</body>
+</html>

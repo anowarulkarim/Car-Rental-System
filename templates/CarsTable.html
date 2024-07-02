@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars Table</title>
+    {% load static %}
+    <script src="{% static 'report.js'%}" type="text/javascript"> </script>
+
+</head>
+<body>
+<center>
+  <h2>Book a car</h2>
+  <input type="text" id="searchtxt" placeholder="Search Records..." onkeyup="searchrecords()">
+<table border="1" id="table1">
+  <tr id="tr">
+    <th> Cars Name</th>
+    <th> Cars Model</th>
+    <th> Cars number</th>
+    <th> Cars Colour</th>
+    <th> Booking Price</th>
+    <th> Passenger Seat Number</th>
+  </tr>
+  {% for display in cars %}
+  <tr>
+
+    <td>{{display.0}}</td>
+    <td>{{display.1}}</td>
+    <td>{{display.2}}</td>
+    <td>{{display.3}}</td>
+    <td>{{display.4}}</td>
+    <td>{{display.5}}</td>
+    <td><a href="book/{{display.2}}">book now</a></td>
+
+  </tr>
+  {% endfor %}
+
+</table>
+  <td><a href="{% url 'bookusercars' %}">Users Cars</a></td>
+
+  </center>
+</body>
+</html>

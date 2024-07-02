@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Cars</title>
+</head>
+<body>
+  <center>
+    <form method="POST" action="/updatecarsinfo/{{cars.cars_number}}">
+          {% csrf_token %}
+    <table border="1">
+      <tr>
+        <td>Cars Name</td>
+        <td> <input type="text" name="cars_name" value="{{cars.cars_name}}"></td>
+      </tr>
+      <tr>
+        <td>Cars Model</td>
+        <td> <input type="text" name="cars_model" value="{{cars.cars_model}}"></td>
+      </tr>
+      <tr>
+        <td>Cars Number</td>
+        <td> <input type="text" name="cars_number" value="{{cars.cars_number}}" readonly></td>
+      </tr>
+      <tr>
+        <td>Cars Colour</td>
+        <td> <input type="text" name="cars_colour" value="{{cars.cars_colour}}"></td>
+      </tr>
+      <tr>
+        <td>Booking Price</td>
+        <td> <input type="text" name="price" value="{{cars.price}}"></td>
+      </tr>
+      <tr>
+        <td>Passenger Seat Number</td>
+        <td> <input type="text" name="seat_number" value="{{cars.seat_number}}"></td>
+      </tr>
+    </table>
+    <input type="submit" value="update">
+      {% if massages %}
+         {% for massage in massages %}
+      <h3>{{ massage }}</h3>
+         {% endfor %}
+         {% endif%}
+      </form>
+  </center>
+</body>
+</html>

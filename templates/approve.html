@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Cars</title>
+</head>
+<body>
+  <center>
+    <form method="POST" action="/finalapprove/{{usercars.cars_number}}">
+          {% csrf_token %}
+    <table border="1">
+      <tr>
+        <td>Users Name</td>
+        <td> <input type="text" name="username" value="{{usercars.username}}" readonly></td>
+      </tr>
+      <tr>
+        <td>area</td>
+        <td> <input type="text" name="area" value="{{usercars.area}}" readonly></td>
+      </tr>
+      <tr>
+        <td>Cars Name</td>
+        <td> <input type="text" name="cars_name" value="{{usercars.cars_name}}" readonly></td>
+      </tr>
+      <tr>
+        <td>Cars Number</td>
+        <td> <input type="text" name="cars_number" value="{{usercars.cars_number}}" readonly></td>
+      </tr>
+      <tr>
+      <tr>
+        <td>Cars Model</td>
+        <td> <input type="text" name="cars_model" value="{{usercars.cars_model}}" readonly></td>
+      </tr>
+
+        <td>Cars colour</td>
+        <td> <input type="text" name="cars_colour" value="{{usercars.cars_colour}}" readonly></td>
+      </tr>
+      <tr>
+        <td>Booking Price</td>
+        <td> <input type="text" name="price" value="{{usercars.price}}" readonly></td>
+      </tr>
+      <tr>
+        <td>Seat Number</td>
+        <td> <input type="text" name="seat_number" value="{{usercars.seat_number}}" readonly></td>
+      </tr>
+      <tr>
+        <td>approval</td>
+        <td> <input type="text" name="approval" value="{{usercars.approval}}" required></td>
+      </tr>
+    </table>
+    <input type="submit" value="update">
+      {% if massages %}
+         {% for massage in massages %}
+      <h3>{{ massage }}</h3>
+         {% endfor %}
+         {% endif%}
+      </form>
+  </center>
+</body>
+</html>

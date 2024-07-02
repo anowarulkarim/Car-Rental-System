@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Table</title>
+</head>
+<body>
+<center>
+<table border="1">
+  <tr>
+    <th> Cars Name</th>
+    <th> Cars Model</th>
+    <th> Cars number</th>
+    <th> Cars Colour</th>
+    <th> Booking Price</th>
+    <th> Passenger Seat Number</th>
+    <th>status</th>
+  </tr>
+       {% for display in cars %}
+  <tr>
+
+    <td>{{display.0}}</td>
+    <td>{{display.1}}</td>
+    <td>{{display.2}}</td>
+    <td>{{display.3}}</td>
+    <td>{{display.4}}</td>
+    <td>{{display.5}}</td>
+    <td>{{display.6}}</td>
+    <td><a href="/updatecar/{{display.2}}">edit</a></td>
+     <td><a href="/delete/{{display.2}}" onclick="return confirm('r u sure ?')">delete</a></td>
+
+  </tr>
+    {% endfor %}
+
+</table>
+    </center>
+</body>
+</html>

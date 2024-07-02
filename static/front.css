@@ -1,0 +1,144 @@
+*
+{
+ padding : 0;
+ margin: 0;
+}
+body{
+ background: url(img/black.jpg) no-repeat;
+ background-size: cover;
+ font-family: sans-serif;
+ background-position: center;
+ box-sizing: border box;
+
+}
+header{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.logo
+{
+   color: white;
+   font-size: 35px;
+   font-family: Arial;
+   padding-left: 20px;
+   float: left;
+   padding-top:10px;
+   font-align: center;
+}
+.nav
+{
+  width: 100%;
+  height: auto;
+  background: #303030;
+}
+.nav ul{
+  float: right;
+  life-style-type: none;
+}
+
+.nav ul li{
+  list-style: none;
+  display: inline-block;
+  position: relative;
+}
+
+.nav ul li a{
+  display: block;
+  padding: 20px 35px;
+  font-size: 17px;
+  font-weight: times new roman;
+  color: white;
+  text-decoration: none;
+}
+.nav ul li a:hover{
+  color : white;
+  background: maroon;
+}
+.nav ul li ul{
+   position: absolute;
+   background: black;
+   left: -9999px;
+}
+.nav ul li:hover ul{
+  left: 0px;
+}
+.nav ul li ul li{
+  width: 200px;
+  border-bottom: 1px solid white;
+}
+.nav ul li ul li ul{
+   position: absolute;
+   background: black;
+   left: -9999px;
+}
+.nav ul li ul li:hover ul{
+  left: 0px;
+}
+.nav ul li ul li ul li{
+  width: 200px;
+  border-bottom: 1px solid white;
+}
+.banner-cover{
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about-logo img{
+  width: 320px;
+  height: auto;
+  margin: 0px 10px;
+  margin-bottom:10px;
+  box-shadow: 0px 2px 2px 0px #000;
+}
+.about-text{
+  width: 720px;
+  height: auto;
+  padding: 0px 20px;
+
+}
+
+.about-text h2{
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid brown;
+  margin-bottom: 20px;
+  color: white;
+  text-align: left
+
+}
+.about-text p{
+  font-size: 16px;
+  color : white;
+  line-height: 22px;
+
+}
+
+.row{
+overflow: auto;
+}
+.col{
+float: left;
+}
+.about-section{
+ background: black;
+ padding: 40px 0px;
+ margin-top: 20px;
+}
+.title{
+width: 180px;
+height: auto;
+margin: 0 auto;
+}
+.title h2{
+font-size:20px;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 1px;
+border-bottom: 2px solid brown;
+text-align: center;
+margin-bottom: 30px;
+color: white;
+}

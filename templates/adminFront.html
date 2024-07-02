@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Front Page</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'front.css'%}">
+</head>
+<body>
+<header>
+    <div class="logo"><h3>CarRental</h3></div>
+    <div class="nav">
+        <ul>
+            <li><a href="{% url 'Car add' %}">Add Cars</a></li>
+             <li><a href="{% url 'edit cars' %}">Manage Cars</a></li>
+            <li><a href="{% url 'usercars' %}">Rent Approval</a></li>
+            <li><a href="{% url 'showadvice' %}">Customers Feedback</a></li>
+            <li><a href="{% url 'logout' %}">Log out</a></li>
+        </ul>
+
+        </div>
+   <div class="banner-cover" style="background-image :url({% static 'img/background.jpg' %});">
+    </div>
+    <div class="about-section">
+        <div class="title">
+            <h2>About us</h2>
+
+        </div>
+        <div class="about">
+            <div class="row">
+                <div class="col">
+            <div class="about-logo">
+                <img src="{% static 'img/about1.jpg'%}">
+            </div>
+            </div>
+                <div class="col">
+            <div class="about-text">
+                <h2>Welcome to Car-Rental</h2>
+                <p>
+                    Bangladesh Car-Rental, introduced its international standard car rental service in Bangladesh since 2018. We can provide our clients with Superior and prompt service. Imagine a car renting experience without tidal waves of paperwork, without mountains of confusing jargon and protocol, without hidden payment traps – just a flat, hassle – free experience.
+
+At Bangladesh Car-Rental,we believe in providing you with excellent personalized Customer service partnered with professional standards and reasonable prices. That’s why we have dedicated our time in making sure you have at your disposal a fleet comprised of a wide range of modern vehicles.
+                </p>
+            </div>
+                </div>
+        </div>
+</div>
+    </div>
+</header>
+
+</body>
+</html>

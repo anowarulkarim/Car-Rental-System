@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars Table</title>
+</head>
+<body>
+<center>
+<table border="1">
+  <tr>
+    <th> Persons Name</th>
+    <th> Area</th>
+    <th> Cars Name</th>
+    <th> Cars Number</th>
+    <th> Cars model</th>
+    <th> Cars Colour</th>
+    <th> Booking Price</th>
+    <th> Seat Number</th>
+    <th> Status </th>
+  </tr>
+  {% for display in usercars %}
+  <tr>
+
+    <td>{{display.0}}</td>
+    <td>{{display.1}}</td>
+    <td>{{display.2}}</td>
+    <td>{{display.3}}</td>
+    <td>{{display.4}}</td>
+    <td>{{display.5}}</td>
+    <td>{{display.6}}</td>
+    <td>{{display.7}}</td>
+    <td>{{display.9}}</td>
+    <td><a href="/approved/{{display.3}}">Approved</a></td>
+    <td><a href="/notapprove/{{display.3}}" onclick="return confirm('r u sure ?')">Not Approve</a></td>
+
+  </tr>
+  {% endfor %}
+</table>
+  </center>
+</body>
+</html>

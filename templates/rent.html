@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rent Car</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'rent.css'%}">
+</head>
+<body background="{% static 'img/rent1.jpg'%}">
+ <div class="wrapper">
+     <div class="title">Rent Your Car </div>
+     <form action="" method="POST">
+         {% csrf_token %}
+     <div class="form">
+       <div class="input_field">
+             <label>Persons Name</label>
+             <input type="text" class="input" name ="user_name" required>
+         </div>
+          <div class="input_field">
+             <label>Area</label>
+             <input type="text" class="input" name="area" required>
+         </div>
+         <div class="input_field">
+             <label>Car Name</label>
+             <input type="text" class="input" name="cars_name" required>
+         </div>
+         <div class="input_field">
+             <label>Model Name</label>
+             <input type="text" class="input" name="cars_model" required>
+         </div>
+         <div class="input_field">
+             <label>Car Number</label>
+             <input type="text" class="input" name="cars_number" required>
+         </div>
+         <div class="input_field">
+             <label>Color</label>
+             <input type="text" class="input" name="cars_colour" required>
+         </div>
+         <div class="input_field">
+             <label>Booking Price</label>
+             <input type="text" class="input" name="price" required>
+         </div>
+         <div class="input_field">
+             <label>Seat Number</label>
+             <input type="text" class="input" name="seat_number" required>
+         </div>
+         <div class="input_field">
+             <label>Approval Status</label>
+             <input type="text" class="input" name="approval" readonly>
+         </div>
+         <div class="input_field">
+             <input type="submit"  value="Add"  class="btn">
+         </div>
+       <div class="approval-text">
+         <p>You have to wait for admin approval</p>
+         </div>
+     </div>
+         </form>
+ </div>
+</body>
+</html>

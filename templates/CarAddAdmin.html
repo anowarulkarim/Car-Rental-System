@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Adding of Admin</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CarAddAdmin.css'%}">
+</head>
+<body background="{% static 'img/Add.jpg'%}">
+ <div class="wrapper">
+     <div class="title">Add New Cars </div>
+      <form action="" method="POST">
+          {% csrf_token %}
+     <div class="form">
+         <div class="input_field">
+             <label>Car Name</label>
+             <input type="text" class="input" name ="cars_name">
+         </div>
+         <div class="input_field">
+             <label>Model Name</label>
+             <input type="text" class="input" name ="cars_model">
+         </div>
+         <div class="input_field">
+             <label>Car Number</label>
+             <input type="text" class="input" name="cars_number">
+         </div>
+         <div class="input_field">
+             <label>Color</label>
+             <input type="text" class="input" name="cars_colour">
+         </div>
+         <div class="input_field">
+             <label>Seat Number</label>
+             <input type="text" class="input" name="seat_number">
+         </div>
+         <div class="input_field">
+             <label>Booking Price</label>
+             <input type="text" class="input" name="price">
+         </div>
+
+         <div class="input_field">
+             <input type="submit"  onclick="" value="Insert"  class="btn">
+         </div>
+
+     </div>
+           </form>
+ </div>
+    </form>
+</body>
+</html>

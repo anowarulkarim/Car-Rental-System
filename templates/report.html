@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars Table</title>
+</head>
+<body>
+<center>
+<table border="1">
+  <tr>
+     <th> id</th>
+    <th> amount</th>
+  </tr>
+  {% for display in payment %}
+  <tr>
+    <td>{{display.0}}</td>
+    <td>{{display.1}}</td>
+  </tr>
+  {% endfor %}
+
+    <h1>Pay to this number 0122234556</h1>
+
+</table>
+  </center>
+</body>
+</html>

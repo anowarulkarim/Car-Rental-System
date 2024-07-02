@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<center>
+
+<table border="1">
+  <tr>
+    <th> advice </th>
+    <th> rating </th>
+  </tr>
+
+  {% for display in reviews %}
+  <tr>
+        <td>{{display.0}}</td>
+        <td>{{display.1}}</td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+
+  </center>
+</body>
+</html>
